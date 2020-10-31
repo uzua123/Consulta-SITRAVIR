@@ -1,0 +1,14 @@
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\bin\Release\MyApp.DB.dll.config
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\bin\Release\MyApp.DB.dll
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\bin\Release\MyApp.DB.pdb
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\bin\Release\EntityFramework.dll
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\bin\Release\EntityFramework.SqlServer.dll
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\bin\Release\MyApp.Models.dll
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\bin\Release\MyApp.Models.pdb
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\bin\Release\EntityFramework.xml
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\bin\Release\EntityFramework.SqlServer.xml
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\obj\Release\MyApp.DB.csprojAssemblyReference.cache
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\obj\Release\MyApp.DB.csproj.CoreCompileInputs.cache
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\obj\Release\MyApp.DB.csproj.CopyComplete
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\obj\Release\MyApp.DB.dll
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.DB\obj\Release\MyApp.DB.pdb

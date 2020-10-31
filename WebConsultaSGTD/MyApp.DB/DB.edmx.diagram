@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="98b3fc89144c4ae0a12e2996bb86fb86" Name="Diagram1">
+        <EntityTypeShape EntityType="DBSTDModel.TBL_CARGO" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_CORRELATIVO_EXPEDIENTE" Width="1.5" PointX="5.75" PointY="1.875" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_DET_EXPEDIENTE" Width="1.5" PointX="6" PointY="7" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_EMPLEADO" Width="1.5" PointX="3" PointY="7.75" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_EMPRESA" Width="1.5" PointX="8.75" PointY="1.875" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_EXPEDIENTE" Width="1.5" PointX="3.75" PointY="1" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_OFICINA" Width="1.5" PointX="0.75" PointY="8.25" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_PERFIL" Width="1.5" PointX="6" PointY="4.125" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_PERMISOS" Width="1.5" PointX="8.25" PointY="9" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_PERSONA" Width="1.5" PointX="1.5" PointY="13.5" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_REQUISITO" Width="1.5" PointX="3" PointY="25" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_SOLICITANTE" Width="1.5" PointX="3.75" PointY="14.625" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_TIPO_DOCUMENTO" Width="1.5" PointX="1.5" PointY="4.75" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_TUPA" Width="1.5" PointX="3" PointY="21" />
+        <EntityTypeShape EntityType="DBSTDModel.TBL_TUPA_REQUISITO" Width="1.5" PointX="5.25" PointY="21.25" />
+        <EntityTypeShape EntityType="DBSTDModel.USUARIOS" Width="1.5" PointX="10.75" PointY="1.875" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_EMPLE__IDCAR__52593CB8" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_DET_E__IDDES__628FA481" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_DET_E__IDEXP__60A75C0F" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_DET_E__IDREM__619B8048" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_EMPLE__IDOFI__534D60F1" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_PERMI__IDEMP__571DF1D5" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_EXPED__IDSOL__5DCAEF64" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_EXPED__IDTIP__5CD6CB2B" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_TUPA__IDOFIC__3A81B327" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_PERMI__IDPER__5812160E" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_SOLIC__IDPER__4CA06362" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_TUPA___IDREQ__4222D4EF" />
+        <AssociationConnector Association="DBSTDModel.FK__TBL_TUPA___IDTUP__412EB0B6" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,283 @@
+﻿@model MyApp.DB.TBL_EXPEDIENTE
+@using MyApp.DB.DbOperations;
+
+@{
+    var service = ConsultaOperation.getInstancia();
+}
+@if (Convert.ToInt32(Session["tiempo"]) != 0)
+{
+    <input type="hidden" id="temporizador" value="@Convert.ToInt32(Session["tiempo"])" />
+    <h5 id="Tiempo"></h5>
+    <span class="label label-info">Este formulario se cerrara en 60 segundos.</span>
+}
+
+@if (TempData["msg"] == null)
+{
+    <!-- CABECERA -->
+    <div class="row">
+        <!-- /.col -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-search"></i>
+                    <h3 class="box-title"> <strong>Consulta de Expediente</strong> </h3>
+                    <a class="btn btn-success btn-sm pull-right" tabindex="0" href="@Url.Content("~/")"><span>Nueva Consulta</span></a>
+
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+
+
+                    <!--CONTENEDOR-->
+                    <div class="row">
+                        <!-- Expediente-->
+                        <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                            <div class="box box-default">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-file"></i>
+                                    <h3 class="box-title">Datos - <strong>Documento</strong> </h3>
+                                    @*<a class="dt-button buttons-print" tabindex="0" aria-controls="DataTables_Table_1" href="#"><span>Print</span></a>*@
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <!--Solicitante-->
+                                    <div class="row clearfix">
+
+                                        <div class="form-group">
+                                            <table class="table no-margin">
+                                                @*
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Datos</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>*@
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong>Nro Expediente</strong> </td>
+                                                        <td><strong>: @Model.NRO_EXPEDIENTE</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Tipo</strong> </td>
+                                                        <td>: @Model.TBL_TIPO_DOCUMENTO.TIPODOCUMENTO </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Asunto</strong> </td>
+                                                        <td>: @Model.ASUNTO </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Estado Tramite</strong></td>
+                                                        @if (Model.IDESTADO == "INGRESADO")
+                                                        {
+                                                            <td class="text-aqua">
+                                                                : Aun no ha sido <strong>Derivado</strong>
+                                                            </td>
+                                                        }
+                                                        else if (Model.IDESTADO == "DERIVADO" || Model.IDESTADO == "RECIBIDO")
+                                                        {
+                                                            <td class="text-aqua">: <strong>En Tramite</strong></td>
+                                                        }
+                                                        else if (Model.IDESTADO == "ARCHIVADO")
+                                                        {
+                                                            <td class="text-danger">: <strong>Archivado</strong></td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td class="text-success">: <strong>Finalizado</strong></td>
+                                                        }
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Fecha Recepcion</strong></td>
+                                                        <td>: @Model.FEC_RECEPCION</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+
+                                    <!--End Solicitante-->
+
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- End Expediente -->
+                    </div>
+                    <!-- /.row -->
+                    <!-- END Contenedor -->
+                    <!-- CONTENEDOR -->
+                    <div class="row">
+                        <!-- Tramitante-->
+                        <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                            <div class="box box-default">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-user"></i>
+                                    <h3 class="box-title">Datos - <strong>Tramitante</strong> </h3>
+                                    @*<a class="dt-button buttons-print" tabindex="0" aria-controls="DataTables_Table_1" href="#"><span>Print</span></a>*@
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <!--Solicitante-->
+                                    <div class="row clearfix">
+
+                                        <div class="form-group">
+                                            <table class="table no-margin">
+                                                @*
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Datos</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>*@
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong>Solicitante</strong> </td>
+                                                        <td>: @Model.TBL_PERSONA.NOMBRE @Model.TBL_PERSONA.APEPATERNO @Model.TBL_PERSONA.APEMATERNO  </td>
+                                                    </tr>
+                                                    @if (Model.TBL_PERSONA.DNI != null)
+                                                    {
+                                                        <tr>
+                                                            <td><strong>DNI</strong></td>
+                                                            <td>: @Model.TBL_PERSONA.DNI</td>
+                                                        </tr>
+                                                    }
+                                                    else
+                                                    {
+                                                        <tr>
+                                                            <td><strong>Ruc</strong></td>
+                                                            <td>: @Model.TBL_PERSONA.RUC</td>
+                                                        </tr>
+                                                    }
+                                                    <tr>
+                                                        <td><strong>Telefono</strong></td>
+                                                        <td>: @Model.TBL_PERSONA.CELULAR</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Correo</strong></td>
+                                                        <td>: @Model.TBL_PERSONA.CORREO</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+
+                                    <!--End Solicitante-->
+
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- End Tramitante -->
+                    </div>
+                    <!-- /.row -->
+                    <!-- END Contenedor -->
+                    <!-- CONTENEDOR -->
+                    @*<h2 class="page-header">Cargo</h2>*@
+
+                    <div class="row">
+                        <!-- /.col -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="box box-default">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-bars"></i>
+                                    <h3 class="box-title">Detalle - <strong>Movimiento</strong> </h3>
+
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body table-responsive no-padding">
+
+                                    <!--Detalle Expediente-->
+                                    <table id="tabla_expediente" class="table table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Oficina Origen</th>
+                                                <th>Fecha Derivacion</th>
+                                                <th>Oficina Destino</th>
+                                                <th>Fecha Recepcion</th>
+                                                <th>Estado</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (Model.TBL_DET_EXPEDIENTE.Count > 0)
+                                            {
+                                                foreach (var item in Model.TBL_DET_EXPEDIENTE)
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @item.IDCORRELATIVO
+                                                        </td>
+                                                        <td>
+                                                            @service.GetOficina((int)item.IDREMITENTE_I)
+                                                        </td>
+                                                        <td>
+                                                            @item.FEC_DERIVACION
+                                                        </td>
+                                                        <td>
+                                                            @service.GetOficina((int)item.IDDESTINO_I)
+                                                        </td>
+                                                        @if (item.FEC_RECEPCION != null)
+                                                        {
+                                                            <td>
+                                                                @item.FEC_RECEPCION
+                                                            </td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td></td>
+                                                        }
+                                                        <td>
+                                                            @item.ESTADO
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <p class="text-red">El Documento aun no ha sido Derivado</p>
+
+                                                    </td>
+                                                </tr>
+                                            }
+
+                                        </tbody>
+                                    </table>
+
+                                    <!--End Detalle Expediente-->
+
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                    <!-- END Contenedor -->
+
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    <!-- END CABECERA -->
+}
+else
+{
+    <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4><i class="icon fa fa-ban"></i> Error!</h4>
+        @TempData["msg"] - <a href="~/Consultas">Realizar Nueva Consulta</a>
+    </div>
+}

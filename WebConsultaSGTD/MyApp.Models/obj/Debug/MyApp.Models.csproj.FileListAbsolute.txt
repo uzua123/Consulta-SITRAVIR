@@ -1,0 +1,6 @@
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.Models\bin\Debug\MyApp.Models.dll
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.Models\bin\Debug\MyApp.Models.pdb
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.Models\obj\Debug\MyApp.Models.csprojAssemblyReference.cache
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.Models\obj\Debug\MyApp.Models.csproj.CoreCompileInputs.cache
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.Models\obj\Debug\MyApp.Models.dll
+D:\Proyecto SGTD\WebConsultaSGTD\MyApp.Models\obj\Debug\MyApp.Models.pdb

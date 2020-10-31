@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSTDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_CARGO">
+    <Key>
+      <PropertyRef Name="IDCARGO" />
+    </Key>
+    <Property Name="IDCARGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CARGO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FLGESTADO" Type="int" />
+    <Property Name="USU_CREACION" Type="int" />
+    <Property Name="FEC_CREACION" Type="datetime" />
+    <Property Name="USU_MODIFICACION" Type="int" />
+    <Property Name="FEC_MODIFICACION" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_CORRELATIVO_EXPEDIENTE">
+    <Key>
+      <PropertyRef Name="IDAÑO" />
+    </Key>
+    <Property Name="IDAÑO" Type="int" Nullable="false" />
+    <Property Name="CORRELATIVO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_DET_EXPEDIENTE">
+    <Key>
+      <PropertyRef Name="IDDET_EXPEDIENTE" />
+    </Key>
+    <Property Name="IDDET_EXPEDIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDEXPEDIENTE" Type="int" />
+    <Property Name="IDCORRELATIVO" Type="int" />
+    <Property Name="FEC_RECEPCION" Type="datetime" />
+    <Property Name="OBS_RECEPCION" Type="varchar" MaxLength="255" />
+    <Property Name="FEC_DERIVACION" Type="datetime" />
+    <Property Name="OBS_DERIVACION" Type="varchar" MaxLength="255" />
+    <Property Name="ESTADO" Type="varchar" MaxLength="20" />
+    <Property Name="DOC_ADJUNTADO" Type="varchar" MaxLength="50" />
+    <Property Name="IDREMITENTE_E" Type="int" />
+    <Property Name="IDREMITENTE_I" Type="int" />
+    <Property Name="IDDESTINO_E" Type="int" />
+    <Property Name="IDDESTINO_I" Type="int" />
+    <Property Name="TIPO" Type="varchar" MaxLength="20" />
+    <Property Name="PRIORIDAD" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FEC_ENVIO" Type="datetime" />
+    <Property Name="FEC_FINALIZAR" Type="datetime" />
+    <Property Name="OBS_FINALIZAR" Type="varchar" MaxLength="255" />
+    <Property Name="FEC_ARCHIVAR" Type="datetime" />
+    <Property Name="OBS_ARCHIVAR" Type="varchar" MaxLength="255" />
+    <Property Name="UBIC_ARCHIVO" Type="varchar" MaxLength="255" />
+    <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
+    <Property Name="FEC_CREACION" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_EMPLEADO">
+    <Key>
+      <PropertyRef Name="IDEMPLEADO" />
+    </Key>
+    <Property Name="IDEMPLEADO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="APEPATERNO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="APEMATERNO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="100" />
+    <Property Name="CORREO" Type="varchar" MaxLength="50" />
+    <Property Name="CELULAR" Type="varchar" MaxLength="9" />
+    <Property Name="IDCARGO" Type="int" />
+    <Property Name="IDOFICINA" Type="int" />
+    <Property Name="FEC_INGRESO" Type="date" />
+    <Property Name="FEC_FINAL" Type="date" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="FLGESTADO" Type="bit" />
+    <Property Name="FOTO" Type="ntext" />
+  </EntityType>
+  <EntityType Name="TBL_EXPEDIENTE">
+    <Key>
+      <PropertyRef Name="IDEXPEDIENTE" />
+    </Key>
+    <Property Name="IDEXPEDIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AÑO" Type="smallint" />
+    <Property Name="TIPO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IDTIPO_DOCUMENTO" Type="int" />
+    <Property Name="NRO_DOCUMENTO" Type="varchar" MaxLength="50" />
+    <Property Name="FEC_RECEPCION" Type="datetime" Nullable="false" />
+    <Property Name="IDSOLICITANTE" Type="int" />
+    <Property Name="ASUNTO" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="FOLIOS" Type="int" Nullable="false" />
+    <Property Name="OBSERVACION" Type="varchar" MaxLength="255" />
+    <Property Name="CLAVE_WEB" Type="varchar" MaxLength="10" />
+    <Property Name="NRO_EXPEDIENTE" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="IDESTADO" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TBL_OFICINA">
+    <Key>
+      <PropertyRef Name="IDOFICINA" />
+    </Key>
+    <Property Name="IDOFICINA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OFICINA" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SIGLA" Type="varchar" MaxLength="20" />
+    <Property Name="SIGLA_DOC" Type="varchar" MaxLength="20" />
+    <Property Name="FLGESTADO" Type="int" />
+    <Property Name="USU_CREACION" Type="int" />
+    <Property Name="FEC_CREACION" Type="datetime" />
+    <Property Name="USU_MODIFICACION" Type="int" />
+    <Property Name="FEC_MODIFICACION" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_PERSONA">
+    <Key>
+      <PropertyRef Name="IDPERSONA" />
+    </Key>
+    <Property Name="IDPERSONA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIPO" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="APEPATERNO" Type="varchar" MaxLength="50" />
+    <Property Name="APEMATERNO" Type="varchar" MaxLength="50" />
+    <Property Name="DNI" Type="char" MaxLength="8" />
+    <Property Name="RUC" Type="char" MaxLength="11" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="100" />
+    <Property Name="CORREO" Type="varchar" MaxLength="50" />
+    <Property Name="CELULAR" Type="varchar" MaxLength="9" />
+    <Property Name="USU_CREACION" Type="int" />
+    <Property Name="FEC_CREACION" Type="datetime" />
+    <Property Name="USU_MODIFICACION" Type="int" />
+    <Property Name="FEC_MODIFICACION" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_REQUISITO">
+    <Key>
+      <PropertyRef Name="IDREQUISITO" />
+    </Key>
+    <Property Name="IDREQUISITO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="REQUISITO" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FLGESTADO" Type="int" />
+    <Property Name="USU_CREACION" Type="int" />
+    <Property Name="FEC_CREACION" Type="datetime" />
+    <Property Name="USU_MODIFICACION" Type="int" />
+    <Property Name="FEC_MODIFICACION" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_SOLICITANTE">
+    <Key>
+      <PropertyRef Name="IDSOLICITANTE" />
+    </Key>
+    <Property Name="IDSOLICITANTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDPERSONA" Type="int" />
+    <Property Name="FLGESTADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_TIPO_DOCUMENTO">
+    <Key>
+      <PropertyRef Name="IDTIPO_DOCUMENTO" />
+    </Key>
+    <Property Name="IDTIPO_DOCUMENTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIPODOCUMENTO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SIGLA" Type="varchar" MaxLength="20" />
+    <Property Name="FLGESTADO" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_TUPA">
+    <Key>
+      <PropertyRef Name="IDTUPA" />
+    </Key>
+    <Property Name="IDTUPA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TUPA" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="DIAS" Type="int" Nullable="false" />
+    <Property Name="TIPO_DIA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IDOFICINA" Type="int" />
+    <Property Name="FLGESTADO" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_TUPA_REQUISITO">
+    <Key>
+      <PropertyRef Name="IDTUPA_REQUISITO" />
+    </Key>
+    <Property Name="IDTUPA_REQUISITO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDTUPA" Type="int" />
+    <Property Name="IDREQUISITO" Type="int" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="IDUSUARIO" />
+    </Key>
+    <Property Name="IDUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="APELLIDOS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DNI" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="250" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FLGESTADO" Type="int" />
+  </EntityType>
+  <Association Name="FK__TBL_DET_E__IDDES__7E37BEF6">
+    <End Role="TBL_OFICINA" Type="Self.TBL_OFICINA" Multiplicity="0..1" />
+    <End Role="TBL_DET_EXPEDIENTE" Type="Self.TBL_DET_EXPEDIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_OFICINA">
+        <PropertyRef Name="IDOFICINA" />
+      </Principal>
+      <Dependent Role="TBL_DET_EXPEDIENTE">
+        <PropertyRef Name="IDDESTINO_I" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_DET_E__IDEXP__7C4F7684">
+    <End Role="TBL_EXPEDIENTE" Type="Self.TBL_EXPEDIENTE" Multiplicity="0..1" />
+    <End Role="TBL_DET_EXPEDIENTE" Type="Self.TBL_DET_EXPEDIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_EXPEDIENTE">
+        <PropertyRef Name="IDEXPEDIENTE" />
+      </Principal>
+      <Dependent Role="TBL_DET_EXPEDIENTE">
+        <PropertyRef Name="IDEXPEDIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_DET_E__IDREM__7D439ABD">
+    <End Role="TBL_OFICINA" Type="Self.TBL_OFICINA" Multiplicity="0..1" />
+    <End Role="TBL_DET_EXPEDIENTE" Type="Self.TBL_DET_EXPEDIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_OFICINA">
+        <PropertyRef Name="IDOFICINA" />
+      </Principal>
+      <Dependent Role="TBL_DET_EXPEDIENTE">
+        <PropertyRef Name="IDREMITENTE_I" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_EMPLE__IDCAR__5070F446">
+    <End Role="TBL_CARGO" Type="Self.TBL_CARGO" Multiplicity="0..1" />
+    <End Role="TBL_EMPLEADO" Type="Self.TBL_EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_CARGO">
+        <PropertyRef Name="IDCARGO" />
+      </Principal>
+      <Dependent Role="TBL_EMPLEADO">
+        <PropertyRef Name="IDCARGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_EMPLE__IDOFI__5165187F">
+    <End Role="TBL_OFICINA" Type="Self.TBL_OFICINA" Multiplicity="0..1" />
+    <End Role="TBL_EMPLEADO" Type="Self.TBL_EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_OFICINA">
+        <PropertyRef Name="IDOFICINA" />
+      </Principal>
+      <Dependent Role="TBL_EMPLEADO">
+        <PropertyRef Name="IDOFICINA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_EXPED__IDSOL__797309D9">
+    <End Role="TBL_PERSONA" Type="Self.TBL_PERSONA" Multiplicity="0..1" />
+    <End Role="TBL_EXPEDIENTE" Type="Self.TBL_EXPEDIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PERSONA">
+        <PropertyRef Name="IDPERSONA" />
+      </Principal>
+      <Dependent Role="TBL_EXPEDIENTE">
+        <PropertyRef Name="IDSOLICITANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_EXPED__IDTIP__787EE5A0">
+    <End Role="TBL_TIPO_DOCUMENTO" Type="Self.TBL_TIPO_DOCUMENTO" Multiplicity="0..1" />
+    <End Role="TBL_EXPEDIENTE" Type="Self.TBL_EXPEDIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_TIPO_DOCUMENTO">
+        <PropertyRef Name="IDTIPO_DOCUMENTO" />
+      </Principal>
+      <Dependent Role="TBL_EXPEDIENTE">
+        <PropertyRef Name="IDTIPO_DOCUMENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_SOLIC__IDPER__4CA06362">
+    <End Role="TBL_PERSONA" Type="Self.TBL_PERSONA" Multiplicity="0..1" />
+    <End Role="TBL_SOLICITANTE" Type="Self.TBL_SOLICITANTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_PERSONA">
+        <PropertyRef Name="IDPERSONA" />
+      </Principal>
+      <Dependent Role="TBL_SOLICITANTE">
+        <PropertyRef Name="IDPERSONA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_TUPA___IDREQ__4222D4EF">
+    <End Role="TBL_REQUISITO" Type="Self.TBL_REQUISITO" Multiplicity="0..1" />
+    <End Role="TBL_TUPA_REQUISITO" Type="Self.TBL_TUPA_REQUISITO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_REQUISITO">
+        <PropertyRef Name="IDREQUISITO" />
+      </Principal>
+      <Dependent Role="TBL_TUPA_REQUISITO">
+        <PropertyRef Name="IDREQUISITO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_TUPA___IDTUP__412EB0B6">
+    <End Role="TBL_TUPA" Type="Self.TBL_TUPA" Multiplicity="0..1" />
+    <End Role="TBL_TUPA_REQUISITO" Type="Self.TBL_TUPA_REQUISITO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_TUPA">
+        <PropertyRef Name="IDTUPA" />
+      </Principal>
+      <Dependent Role="TBL_TUPA_REQUISITO">
+        <PropertyRef Name="IDTUPA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_TUPA__IDOFIC__3A81B327">
+    <End Role="TBL_OFICINA" Type="Self.TBL_OFICINA" Multiplicity="0..1" />
+    <End Role="TBL_TUPA" Type="Self.TBL_TUPA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_OFICINA">
+        <PropertyRef Name="IDOFICINA" />
+      </Principal>
+      <Dependent Role="TBL_TUPA">
+        <PropertyRef Name="IDOFICINA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBSTDModelStoreContainer">
+    <EntitySet Name="TBL_CARGO" EntityType="Self.TBL_CARGO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CORRELATIVO_EXPEDIENTE" EntityType="Self.TBL_CORRELATIVO_EXPEDIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_DET_EXPEDIENTE" EntityType="Self.TBL_DET_EXPEDIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_EMPLEADO" EntityType="Self.TBL_EMPLEADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_EXPEDIENTE" EntityType="Self.TBL_EXPEDIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_OFICINA" EntityType="Self.TBL_OFICINA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_PERSONA" EntityType="Self.TBL_PERSONA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_REQUISITO" EntityType="Self.TBL_REQUISITO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_SOLICITANTE" EntityType="Self.TBL_SOLICITANTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TIPO_DOCUMENTO" EntityType="Self.TBL_TIPO_DOCUMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TUPA" EntityType="Self.TBL_TUPA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TUPA_REQUISITO" EntityType="Self.TBL_TUPA_REQUISITO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TBL_DET_E__IDDES__7E37BEF6" Association="Self.FK__TBL_DET_E__IDDES__7E37BEF6">
+      <End Role="TBL_OFICINA" EntitySet="TBL_OFICINA" />
+      <End Role="TBL_DET_EXPEDIENTE" EntitySet="TBL_DET_EXPEDIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_DET_E__IDEXP__7C4F7684" Association="Self.FK__TBL_DET_E__IDEXP__7C4F7684">
+      <End Role="TBL_EXPEDIENTE" EntitySet="TBL_EXPEDIENTE" />
+      <End Role="TBL_DET_EXPEDIENTE" EntitySet="TBL_DET_EXPEDIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_DET_E__IDREM__7D439ABD" Association="Self.FK__TBL_DET_E__IDREM__7D439ABD">
+      <End Role="TBL_OFICINA" EntitySet="TBL_OFICINA" />
+      <End Role="TBL_DET_EXPEDIENTE" EntitySet="TBL_DET_EXPEDIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_EMPLE__IDCAR__5070F446" Association="Self.FK__TBL_EMPLE__IDCAR__5070F446">
+      <End Role="TBL_CARGO" EntitySet="TBL_CARGO" />
+      <End Role="TBL_EMPLEADO" EntitySet="TBL_EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_EMPLE__IDOFI__5165187F" Association="Self.FK__TBL_EMPLE__IDOFI__5165187F">
+      <End Role="TBL_OFICINA" EntitySet="TBL_OFICINA" />
+      <End Role="TBL_EMPLEADO" EntitySet="TBL_EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_EXPED__IDSOL__797309D9" Association="Self.FK__TBL_EXPED__IDSOL__797309D9">
+      <End Role="TBL_PERSONA" EntitySet="TBL_PERSONA" />
+      <End Role="TBL_EXPEDIENTE" EntitySet="TBL_EXPEDIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_EXPED__IDTIP__787EE5A0" Association="Self.FK__TBL_EXPED__IDTIP__787EE5A0">
+      <End Role="TBL_TIPO_DOCUMENTO" EntitySet="TBL_TIPO_DOCUMENTO" />
+      <End Role="TBL_EXPEDIENTE" EntitySet="TBL_EXPEDIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_SOLIC__IDPER__4CA06362" Association="Self.FK__TBL_SOLIC__IDPER__4CA06362">
+      <End Role="TBL_PERSONA" EntitySet="TBL_PERSONA" />
+      <End Role="TBL_SOLICITANTE" EntitySet="TBL_SOLICITANTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_TUPA___IDREQ__4222D4EF" Association="Self.FK__TBL_TUPA___IDREQ__4222D4EF">
+      <End Role="TBL_REQUISITO" EntitySet="TBL_REQUISITO" />
+      <End Role="TBL_TUPA_REQUISITO" EntitySet="TBL_TUPA_REQUISITO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_TUPA___IDTUP__412EB0B6" Association="Self.FK__TBL_TUPA___IDTUP__412EB0B6">
+      <End Role="TBL_TUPA" EntitySet="TBL_TUPA" />
+      <End Role="TBL_TUPA_REQUISITO" EntitySet="TBL_TUPA_REQUISITO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_TUPA__IDOFIC__3A81B327" Association="Self.FK__TBL_TUPA__IDOFIC__3A81B327">
+      <End Role="TBL_OFICINA" EntitySet="TBL_OFICINA" />
+      <End Role="TBL_TUPA" EntitySet="TBL_TUPA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

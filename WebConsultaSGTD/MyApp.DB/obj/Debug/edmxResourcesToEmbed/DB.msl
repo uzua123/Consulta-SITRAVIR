@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBSTDModelStoreContainer" CdmEntityContainer="DBSTDEntities">
+    <EntitySetMapping Name="TBL_CARGO">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_CARGO">
+        <MappingFragment StoreEntitySet="TBL_CARGO">
+          <ScalarProperty Name="IDCARGO" ColumnName="IDCARGO" />
+          <ScalarProperty Name="CARGO" ColumnName="CARGO" />
+          <ScalarProperty Name="FLGESTADO" ColumnName="FLGESTADO" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="USU_MODIFICACION" ColumnName="USU_MODIFICACION" />
+          <ScalarProperty Name="FEC_MODIFICACION" ColumnName="FEC_MODIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_CORRELATIVO_EXPEDIENTE">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_CORRELATIVO_EXPEDIENTE">
+        <MappingFragment StoreEntitySet="TBL_CORRELATIVO_EXPEDIENTE">
+          <ScalarProperty Name="IDAÑO" ColumnName="IDAÑO" />
+          <ScalarProperty Name="CORRELATIVO" ColumnName="CORRELATIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_DET_EXPEDIENTE">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_DET_EXPEDIENTE">
+        <MappingFragment StoreEntitySet="TBL_DET_EXPEDIENTE">
+          <ScalarProperty Name="IDDET_EXPEDIENTE" ColumnName="IDDET_EXPEDIENTE" />
+          <ScalarProperty Name="IDEXPEDIENTE" ColumnName="IDEXPEDIENTE" />
+          <ScalarProperty Name="IDCORRELATIVO" ColumnName="IDCORRELATIVO" />
+          <ScalarProperty Name="FEC_RECEPCION" ColumnName="FEC_RECEPCION" />
+          <ScalarProperty Name="OBS_RECEPCION" ColumnName="OBS_RECEPCION" />
+          <ScalarProperty Name="FEC_DERIVACION" ColumnName="FEC_DERIVACION" />
+          <ScalarProperty Name="OBS_DERIVACION" ColumnName="OBS_DERIVACION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DOC_ADJUNTADO" ColumnName="DOC_ADJUNTADO" />
+          <ScalarProperty Name="IDREMITENTE_E" ColumnName="IDREMITENTE_E" />
+          <ScalarProperty Name="IDREMITENTE_I" ColumnName="IDREMITENTE_I" />
+          <ScalarProperty Name="IDDESTINO_E" ColumnName="IDDESTINO_E" />
+          <ScalarProperty Name="IDDESTINO_I" ColumnName="IDDESTINO_I" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="PRIORIDAD" ColumnName="PRIORIDAD" />
+          <ScalarProperty Name="FEC_ENVIO" ColumnName="FEC_ENVIO" />
+          <ScalarProperty Name="FEC_FINALIZAR" ColumnName="FEC_FINALIZAR" />
+          <ScalarProperty Name="OBS_FINALIZAR" ColumnName="OBS_FINALIZAR" />
+          <ScalarProperty Name="FEC_ARCHIVAR" ColumnName="FEC_ARCHIVAR" />
+          <ScalarProperty Name="OBS_ARCHIVAR" ColumnName="OBS_ARCHIVAR" />
+          <ScalarProperty Name="UBIC_ARCHIVO" ColumnName="UBIC_ARCHIVO" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_EMPLEADO">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_EMPLEADO">
+        <MappingFragment StoreEntitySet="TBL_EMPLEADO">
+          <ScalarProperty Name="IDEMPLEADO" ColumnName="IDEMPLEADO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APEPATERNO" ColumnName="APEPATERNO" />
+          <ScalarProperty Name="APEMATERNO" ColumnName="APEMATERNO" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+          <ScalarProperty Name="IDCARGO" ColumnName="IDCARGO" />
+          <ScalarProperty Name="IDOFICINA" ColumnName="IDOFICINA" />
+          <ScalarProperty Name="FEC_INGRESO" ColumnName="FEC_INGRESO" />
+          <ScalarProperty Name="FEC_FINAL" ColumnName="FEC_FINAL" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="FLGESTADO" ColumnName="FLGESTADO" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_EXPEDIENTE">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_EXPEDIENTE">
+        <MappingFragment StoreEntitySet="TBL_EXPEDIENTE">
+          <ScalarProperty Name="IDEXPEDIENTE" ColumnName="IDEXPEDIENTE" />
+          <ScalarProperty Name="AÑO" ColumnName="AÑO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="IDTIPO_DOCUMENTO" ColumnName="IDTIPO_DOCUMENTO" />
+          <ScalarProperty Name="NRO_DOCUMENTO" ColumnName="NRO_DOCUMENTO" />
+          <ScalarProperty Name="FEC_RECEPCION" ColumnName="FEC_RECEPCION" />
+          <ScalarProperty Name="IDSOLICITANTE" ColumnName="IDSOLICITANTE" />
+          <ScalarProperty Name="ASUNTO" ColumnName="ASUNTO" />
+          <ScalarProperty Name="FOLIOS" ColumnName="FOLIOS" />
+          <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+          <ScalarProperty Name="CLAVE_WEB" ColumnName="CLAVE_WEB" />
+          <ScalarProperty Name="NRO_EXPEDIENTE" ColumnName="NRO_EXPEDIENTE" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_OFICINA">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_OFICINA">
+        <MappingFragment StoreEntitySet="TBL_OFICINA">
+          <ScalarProperty Name="IDOFICINA" ColumnName="IDOFICINA" />
+          <ScalarProperty Name="OFICINA" ColumnName="OFICINA" />
+          <ScalarProperty Name="SIGLA" ColumnName="SIGLA" />
+          <ScalarProperty Name="SIGLA_DOC" ColumnName="SIGLA_DOC" />
+          <ScalarProperty Name="FLGESTADO" ColumnName="FLGESTADO" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="USU_MODIFICACION" ColumnName="USU_MODIFICACION" />
+          <ScalarProperty Name="FEC_MODIFICACION" ColumnName="FEC_MODIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_PERSONA">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_PERSONA">
+        <MappingFragment StoreEntitySet="TBL_PERSONA">
+          <ScalarProperty Name="IDPERSONA" ColumnName="IDPERSONA" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APEPATERNO" ColumnName="APEPATERNO" />
+          <ScalarProperty Name="APEMATERNO" ColumnName="APEMATERNO" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="RUC" ColumnName="RUC" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="USU_MODIFICACION" ColumnName="USU_MODIFICACION" />
+          <ScalarProperty Name="FEC_MODIFICACION" ColumnName="FEC_MODIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_REQUISITO">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_REQUISITO">
+        <MappingFragment StoreEntitySet="TBL_REQUISITO">
+          <ScalarProperty Name="IDREQUISITO" ColumnName="IDREQUISITO" />
+          <ScalarProperty Name="REQUISITO" ColumnName="REQUISITO" />
+          <ScalarProperty Name="FLGESTADO" ColumnName="FLGESTADO" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="USU_MODIFICACION" ColumnName="USU_MODIFICACION" />
+          <ScalarProperty Name="FEC_MODIFICACION" ColumnName="FEC_MODIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SOLICITANTE">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_SOLICITANTE">
+        <MappingFragment StoreEntitySet="TBL_SOLICITANTE">
+          <ScalarProperty Name="IDSOLICITANTE" ColumnName="IDSOLICITANTE" />
+          <ScalarProperty Name="IDPERSONA" ColumnName="IDPERSONA" />
+          <ScalarProperty Name="FLGESTADO" ColumnName="FLGESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_TIPO_DOCUMENTO">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_TIPO_DOCUMENTO">
+        <MappingFragment StoreEntitySet="TBL_TIPO_DOCUMENTO">
+          <ScalarProperty Name="IDTIPO_DOCUMENTO" ColumnName="IDTIPO_DOCUMENTO" />
+          <ScalarProperty Name="TIPODOCUMENTO" ColumnName="TIPODOCUMENTO" />
+          <ScalarProperty Name="SIGLA" ColumnName="SIGLA" />
+          <ScalarProperty Name="FLGESTADO" ColumnName="FLGESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_TUPA">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_TUPA">
+        <MappingFragment StoreEntitySet="TBL_TUPA">
+          <ScalarProperty Name="IDTUPA" ColumnName="IDTUPA" />
+          <ScalarProperty Name="TUPA" ColumnName="TUPA" />
+          <ScalarProperty Name="DIAS" ColumnName="DIAS" />
+          <ScalarProperty Name="TIPO_DIA" ColumnName="TIPO_DIA" />
+          <ScalarProperty Name="IDOFICINA" ColumnName="IDOFICINA" />
+          <ScalarProperty Name="FLGESTADO" ColumnName="FLGESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_TUPA_REQUISITO">
+      <EntityTypeMapping TypeName="DBSTDModel.TBL_TUPA_REQUISITO">
+        <MappingFragment StoreEntitySet="TBL_TUPA_REQUISITO">
+          <ScalarProperty Name="IDTUPA_REQUISITO" ColumnName="IDTUPA_REQUISITO" />
+          <ScalarProperty Name="IDTUPA" ColumnName="IDTUPA" />
+          <ScalarProperty Name="IDREQUISITO" ColumnName="IDREQUISITO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="DBSTDModel.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="FLGESTADO" ColumnName="FLGESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
